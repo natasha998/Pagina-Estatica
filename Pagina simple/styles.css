@@ -1,0 +1,170 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background: #000 url(./imagenes/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;/*El fondo queda fijo*/
+}
+
+.content{
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/****HEADER****/
+header{
+    background: white;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    margin-bottom: 15px;;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    margin-left: 30px;
+}
+header .menu a{
+    color:#000;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 40px;
+}
+
+header .menu a:hover{
+    border-bottom: 1px solid #000;
+}
+main{
+    background: #ccc;
+    padding: 20px;
+    width: 70%;
+}
+
+main article .imagen{
+    margin-bottom: 20px;
+
+}
+
+main article .imagen img{
+    width: 100%;
+    vertical-align: top;
+}
+
+main article h2{
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 32px;
+    text-align: center;
+}
+
+main article p{
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 27px;
+    text-align: justify;
+
+}
+aside{
+    width: 30%;
+    background: #537dca;
+    padding: 20px;
+    display: flex;
+    flex-direction: column ;
+    flex-shrink: wrap;
+    justify-content: space-between;
+}
+
+aside .ad{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+    background: #4264a2;
+   
+}
+
+footer{
+    margin: 20px 0;
+    background: rgba(255,255,255, .2) ;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap; 
+   justify-content: space-between;
+}
+
+footer .redes a{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    border-bottom: 1px solid white;
+}
+
+footer .redes a:hover{
+    border-bottom: none;
+}
+
+@media screen and (max-width: 800px){
+    main{
+        width:100%;
+    }
+    aside{
+        width: 100%;
+        flex-direction: row;
+    }
+    aside .ad{
+        width: 40%;
+
+    }
+}
+@media screen and (max-width:600px){
+    header{
+        flex-direction: column;
+        padding-bottom:20px;
+    }
+
+    header .logo{
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    header .menu{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        background: rgba(255, 255,255, .2);
+
+    }
+    
+    header .menu a{
+        margin: 0 20px;
+    }
+    footer{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    footer .redes{
+        margin-bottom: 10px;
+    }
+
+}
+@media screen and (max-width:400px){
+    aside{
+        display: none;
+    }
+     
+}    
